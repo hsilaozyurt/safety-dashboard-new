@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Risk Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div id="srd-root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="dashboard.js"></script>
+  <script>
+    SRD.init({
+      incidentsCsv : 'data/All_Station_Info.csv',
+      stationsCsv  : 'data/Ucus_sayilari.csv',
+      spiCsv       : 'data/SPI_kategorileri.csv',
+      rootId       : 'srd-root'
+    });
+  </script>
+
+</body>
+</html>
